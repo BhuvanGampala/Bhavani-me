@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const months = {
-        "January": [ "gruhapravesh.jpg"],
+        "January": [ "gruhapravesh.jpg","image1.jpg"],
         "February": ["image3.jpg", "image4.jpg"],
         // Add more months and photos as needed
     };
