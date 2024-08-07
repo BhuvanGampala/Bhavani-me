@@ -1,24 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
     const months = {
-        "January": [ "gruhapravesh.jpg","image1.jpg"],
+        "January": ["image1.jpg", "image2.jpg"],
         "February": ["image3.jpg", "image4.jpg"],
         // Add more months and photos as needed
     };
 
     const monthList = document.getElementById('month-list');
-    const slideImage = document.getElementById('slide-image');
-
-    let currentMonth = "January";
-    let currentImageIndex = 0;
+    const swiperWrapper = document.getElementById('swiper-wrapper');
 
     function loadMonth(month) {
-        currentMonth = month;
-        currentImageIndex = 0;
-        showImage();
-    }
-
-    function showImage() {
-        slideImage.src = `images/${months[currentMonth][currentImageIndex]}`;
+        swiperWrapper.innerHTML = '';
+        months[month].forEach(image => {
+            const slide = document.createElement('div');
+            slide.classList.add('swiper-slide');
+            const img = document.createElement('img');
+            img.src = `images/${image}`;
+            slide.appendChild(img);
+            swiperWrapper.appendChild(slide);
+        });
+        // Reinitialize Swiper
+        swiper.update();
     }
 
     function createMonthLinks() {
@@ -36,10 +37,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     createMonthLinks();
-    showImage();
+    loadMonth(Object.keys(months)[0]);
 
-    setInterval(() => {
-        currentImageIndex = (currentImageIndex + 1) % months[currentMonth].length;
-        showImage();
-    }, 3000); // Change image every 3 seconds
+    // Initialize Swiper
+    const swiper = new Swiper('.swiper-container', {
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
 });
