@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
         "January 2024": ["jan1.jpg", "jan2.jpg"],
         "February": ["feb1.jpg", "feb2.jpg","feb3.jpg", "feb4.jpg","feb5.jpg", "feb6.jpg"],
         "March": ["mar1.jpg", "mar2.jpg"],
-        "April": ["apr1.jpg", "apr2.jpg","apr3.jpg", "apr4.jpg","apr5.jpg", "apr6.jpg","apr7"],
+        "April": ["apr1.jpg", "apr2.jpg","apr3.jpg", "apr4.jpg","apr5.jpg", "apr6.jpg","apr7.jpg"],
         "May": ["may1.jpg","may2.jpg"],
-        "June24": ["jun1.jpg", "jun2.jpg"],
+        "June": ["jun1.jpg", "jun2.jpg"],
         "July24": ["jul1.jpg"],
         "August24": ["aug124.jpg"],
         // Add more months and photos as needed
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const monthList = document.getElementById('month-list');
     const slideImage = document.getElementById('slide-image');
 
-    let currentMonth = "January";
+    let currentMonth = "June23";
     let currentImageIndex = 0;
 
     function loadMonth(month) {
