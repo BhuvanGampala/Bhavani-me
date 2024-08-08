@@ -72,7 +72,7 @@ nav ul li a {
 .greeting-container h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: green;
+    color: pink;
     text-align: center; /* Center text alignment */
     word-wrap: break-word;
 }
