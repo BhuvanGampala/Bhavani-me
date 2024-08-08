@@ -124,6 +124,7 @@ nav ul li a {
     }
 }
 /* Month navigation styles */
+/* Month navigation styles */
 #month-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Create 4 equal columns */
@@ -172,4 +173,3 @@ nav ul li a {
         font-size: 1em; /* Further reduce the font size for very small screens */
     }
 }
-
