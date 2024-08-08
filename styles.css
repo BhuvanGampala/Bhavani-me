@@ -123,4 +123,51 @@ nav ul li a {
         transform: translateY(0) rotate(-45deg);
     }
 }
+/* Month navigation styles */
+#month-list {
+    display: flex;
+    flex-wrap: wrap; /* Allows the links to wrap onto the next line if needed */
+    justify-content: center; /* Center the month links */
+    padding: 10px 0; /* Add some padding for spacing */
+    margin: 0; /* Remove default margin */
+    list-style: none; /* Remove bullets */
+    background-color: #f1f1f1; /* Background color for the navbar */
+}
+
+#month-list li {
+    margin: 5px 10px; /* Space between the month links */
+}
+
+#month-list a {
+    text-decoration: none;
+    font-size: 1.2em; /* Slightly increase font size for readability */
+    color: #333; /* Default text color */
+    padding: 5px 10px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease;
+}
+
+#month-list a:hover,
+#month-list .active-month {
+    background-color: grey; /* Highlight on hover and for the active month */
+    color: #fff; /* White text color when highlighted */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    #month-list {
+        flex-direction: column; /* Stack the month links vertically on smaller screens */
+        align-items: center; /* Center align the stacked links */
+    }
+
+    #month-list li {
+        margin: 5px 0; /* Adjust spacing between the links */
+    }
+}
+
+@media (max-width: 480px) {
+    #month-list a {
+        font-size: 1em; /* Further reduce the font size for very small screens */
+    }
+}
 
