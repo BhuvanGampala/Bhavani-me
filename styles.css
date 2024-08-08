@@ -126,7 +126,7 @@ nav ul li a {
 /* Month navigation styles */
 #month-list {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Create 4 equal columns */
+    grid-template-columns: repeat(4, 1fr); /* Create 4 equal columns */
     gap: 10px; /* Space between the grid items */
     padding: 10px 0; /* Add some padding for spacing */
     margin: 0; /* Remove default margin */
