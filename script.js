@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 5000); // Display the greeting for 5 seconds
 
     const months = {
-        "June 2023": ["gruhapravesh.jpg"],
+        "June23": ["gruhapravesh.jpg"],
         "July": ["july23.jpg"],
         "August": ["aug23.jpg"],
         "September": ["sep1.jpg", "sep2.jpg"],
@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
         "March": ["mar1.jpg", "mar2.jpg"],
         "April": ["apr1.jpg", "apr2.jpg","apr3.jpg", "apr4.jpg","apr5.jpg", "apr6.jpg","apr7"],
         "May": ["may1.jpg","may2.jpg"],
-        "June": ["jun1.jpg", "jun2.jpg"],
-        "July": ["jul1.jpg"],
-        "August": ["aug1.jpg"],
+        "June24": ["jun1.jpg", "jun2.jpg"],
+        "July24": ["jul1.jpg"],
+        "August24": ["aug1.jpg"],
         // Add more months and photos as needed
     };
 
