@@ -49,3 +49,76 @@ nav ul li a {
     height: 100%;
     object-fit: cover;
 }
+/* Styles for the greeting message */
+.greeting-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Ensure it appears on top of everything */
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.greeting-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: green;
+}
+
+.hearts {
+    display: flex;
+    justify-content: center;
+}
+
+.heart {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: relative;
+    margin: 10px;
+    transform: rotate(-45deg);
+    animation: float 2s infinite ease-in-out;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart::before {
+    top: -25px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: 25px;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(-45deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(-45deg);
+    }
+    100% {
+        transform: translateY(0) rotate(-45deg);
+    }
+}
+
