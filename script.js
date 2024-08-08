@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "May": ["may1.jpg","may2.jpg"],
         "June24": ["jun1.jpg", "jun2.jpg"],
         "July24": ["jul1.jpg"],
-        "August24": ["aug1.jpg"],
+        "August24": ["aug124.jpg"],
         // Add more months and photos as needed
     };
 
