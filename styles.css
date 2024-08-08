@@ -125,17 +125,19 @@ nav ul li a {
 }
 /* Month navigation styles */
 #month-list {
-    display: flex;
-    flex-wrap: wrap; /* Allows the links to wrap onto the next line if needed */
-    justify-content: center; /* Center the month links */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Create 4 equal columns */
+    gap: 10px; /* Space between the grid items */
     padding: 10px 0; /* Add some padding for spacing */
     margin: 0; /* Remove default margin */
     list-style: none; /* Remove bullets */
     background-color: #f1f1f1; /* Background color for the navbar */
+    justify-content: center; /* Center the month links */
 }
 
 #month-list li {
     margin: 5px 10px; /* Space between the month links */
+    text-align: center; /* Center text inside each list item */
 }
 
 #month-list a {
@@ -145,6 +147,7 @@ nav ul li a {
     padding: 5px 10px; /* Padding around the text */
     border-radius: 5px; /* Rounded corners */
     transition: background-color 0.3s ease;
+    display: block; /* Make the link fill the li element */
 }
 
 #month-list a:hover,
@@ -156,16 +159,15 @@ nav ul li a {
 /* Responsive styles for smaller screens */
 @media (max-width: 768px) {
     #month-list {
-        flex-direction: column; /* Stack the month links vertically on smaller screens */
-        align-items: center; /* Center align the stacked links */
-    }
-
-    #month-list li {
-        margin: 5px 0; /* Adjust spacing between the links */
+        grid-template-columns: repeat(2, 1fr); /* 2 months per row on smaller screens */
     }
 }
 
 @media (max-width: 480px) {
+    #month-list {
+        grid-template-columns: 1fr; /* 1 month per row on very small screens */
+    }
+
     #month-list a {
         font-size: 1em; /* Further reduce the font size for very small screens */
     }
